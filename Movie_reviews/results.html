@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movie Classification</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<style>
+      body {background-image: url('static/images/movie.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-size: 100% 100%;
+            }
+    </style>
+  </head>
+  <body>
+
+
+<h2 style="font-size:50px; color:white;">Prediction:</h2>
+<div style="font-size:20px; color:white;">This movie review is <strong style="font-size: 30px;">{{ prediction }}</strong>
+	 (probability: {{ probability }}%).</div>
+
+	 
+<div style="font-size:20px; color:white;">The ranking of movie is {{ rank }}.</div>
+
+<br></br>
+
+<div id='button'>
+	  <form action="/">
+	    <input type=submit value='Submit another review'>
+	  </form>
+</div>
+
+  </body>
+</html>

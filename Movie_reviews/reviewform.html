@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movie Classification</title>
+	  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      body {background-image: url('static/images/movie.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-size: 100% 100%;
+            }
+    </style>
+
+</head>
+<!-- <body style="background-color:powderblue;"> -->
+
+<h1 style="font-size:50px; color:white;">Movie Review Analysis</h1>
+
+<p style="font-size: 40px; color: white">Enter review</p>
+
+
+{% from "_formhelpers.html" import render_field %}
+
+<form method=post action="/results">
+  <dl>
+	{{ render_field(form.moviereview, cols='45', rows='17') }}
+  </dl>
+  <div>
+	  <input type=submit value='Analyse review' name='submit_btn'>
+  </div>
+</form>
+
+  </body>
+</html>
