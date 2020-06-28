@@ -6,10 +6,10 @@ import os
 import numpy as np
 #from sklearn.externals import joblib
 import joblib
-loaded_model=joblib.load(open("pkl_objects/model.pkl", 'rb'))
-loaded_stop=joblib.load(open("./pkl_objects/stopwords.pkl", 'rb'))
-loaded_vec=joblib.load(open("./pkl_objects/vectorizer.pkl", 'rb'))
-model1=joblib.load(open("./pkl_objects/model_ranking", 'rb'))
+loaded_model=joblib.load(open("./model.pkl", 'rb'))
+loaded_stop=joblib.load(open("./stopwords.pkl", 'rb'))
+loaded_vec=joblib.load(open("./vectorizer.pkl", 'rb'))
+model1=joblib.load(open("./model_ranking", 'rb'))
 # vec1 = joblib.load(open("./pkl_objects/vec1.pkl", 'rb'))
 
 app = Flask(__name__)
